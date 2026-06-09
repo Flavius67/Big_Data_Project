@@ -1,0 +1,1070 @@
+<?xml version='1.0' encoding='utf-8' ?>
+
+<!-- build 20261.26.0512.1636                               -->
+<workbook original-version='18.1' source-build='2026.1.2 (20261.26.0512.1636)' source-platform='win' version='18.1' xmlns:user='http://www.tableausoftware.com/xml/user'>
+  <document-format-change-manifest>
+    <AnimationOnByDefault />
+    <IntuitiveSorting />
+    <IntuitiveSorting_SP2 />
+    <MarkAnimation />
+    <ObjectModelEncapsulateLegacy />
+    <ObjectModelExtractV2 />
+    <ObjectModelTableType />
+    <SchemaViewerObjectModel />
+    <SheetIdentifierTracking />
+    <_.fcp.VConnDownstreamExtractsWithWarnings.true...VConnDownstreamExtractsWithWarnings />
+    <WindowsPersistSimpleIdentifiers />
+  </document-format-change-manifest>
+  <preferences>
+    <preference name='ui.encoding.shelf.height' value='24' />
+    <preference name='ui.shelf.height' value='26' />
+  </preferences>
+  <datasources>
+    <datasource caption='spark_brand_insights.csv (Multiple Connections)' inline='true' name='federated.0vf06et0xphfvm1c27yq11e65rkl' version='18.1'>
+      <connection class='federated'>
+        <named-connections>
+          <named-connection caption='spark_brand_insights' name='textscan.1myipen1gkhdaw1aeue520cj8tsd'>
+            <connection class='textscan' directory='C:/Users/plush/Documents/Courses/BigData/Big_Data_Project' filename='spark_brand_insights.csv' password='' server='' />
+          </named-connection>
+          <named-connection caption='spark_ml_predictions' name='textscan.1v4dn220mtb5fk10fm3xy1ae6sdr'>
+            <connection class='textscan' directory='C:/Users/plush/Documents/Courses/BigData/Big_Data_Project' filename='spark_ml_predictions.csv' password='' server='' />
+          </named-connection>
+          <named-connection caption='spark_region_insights' name='textscan.1y7z3fc14nmpar0zzzf8h10a4l5g'>
+            <connection class='textscan' directory='C:/Users/plush/Documents/Courses/BigData/Big_Data_Project' filename='spark_region_insights.csv' password='' server='' />
+          </named-connection>
+        </named-connections>
+        <relation connection='textscan.1myipen1gkhdaw1aeue520cj8tsd' name='spark_brand_insights.csv' table='[spark_brand_insights#csv]' type='table'>
+          <columns character-set='UTF-8' header='yes' locale='en_GB' separator=','>
+            <column datatype='string' name='Brand' ordinal='0' />
+            <column datatype='integer' name='Total_Cans_Sold' ordinal='1' />
+            <column datatype='real' name='Total_Revenue_SEK' ordinal='2' />
+            <column datatype='real' name='Avg_Price_Per_Can' ordinal='3' />
+          </columns>
+        </relation>
+        <metadata-records>
+          <metadata-record class='capability'>
+            <remote-name />
+            <remote-type>0</remote-type>
+            <parent-name>[spark_brand_insights.csv]</parent-name>
+            <remote-alias />
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='character-set'>&quot;UTF-8&quot;</attribute>
+              <attribute datatype='string' name='collation'>&quot;en_GB&quot;</attribute>
+              <attribute datatype='string' name='currency'>&quot;£&quot;</attribute>
+              <attribute datatype='string' name='field-delimiter'>&quot;,&quot;</attribute>
+              <attribute datatype='string' name='header-row'>&quot;true&quot;</attribute>
+              <attribute datatype='string' name='locale'>&quot;en_GB&quot;</attribute>
+              <attribute datatype='string' name='single-char'>&quot;&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Brand</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[Brand]</local-name>
+            <parent-name>[spark_brand_insights.csv]</parent-name>
+            <remote-alias>Brand</remote-alias>
+            <ordinal>0</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RGB' />
+            <object-id>[spark_brand_insights.csv_68493966FFDC4A09A922DBC623229388]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Total_Cans_Sold</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[Total_Cans_Sold]</local-name>
+            <parent-name>[spark_brand_insights.csv]</parent-name>
+            <remote-alias>Total_Cans_Sold</remote-alias>
+            <ordinal>1</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[spark_brand_insights.csv_68493966FFDC4A09A922DBC623229388]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Total_Revenue_SEK</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[Total_Revenue_SEK]</local-name>
+            <parent-name>[spark_brand_insights.csv]</parent-name>
+            <remote-alias>Total_Revenue_SEK</remote-alias>
+            <ordinal>2</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[spark_brand_insights.csv_68493966FFDC4A09A922DBC623229388]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Avg_Price_Per_Can</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[Avg_Price_Per_Can]</local-name>
+            <parent-name>[spark_brand_insights.csv]</parent-name>
+            <remote-alias>Avg_Price_Per_Can</remote-alias>
+            <ordinal>3</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[spark_brand_insights.csv_68493966FFDC4A09A922DBC623229388]</object-id>
+          </metadata-record>
+        </metadata-records>
+      </connection>
+      <aliases enabled='yes' />
+      <column caption='Avg Price Per Can' datatype='real' name='[Avg_Price_Per_Can]' role='measure' type='quantitative' />
+      <column caption='Total Cans Sold' datatype='integer' name='[Total_Cans_Sold]' role='measure' type='quantitative' />
+      <column caption='Total Revenue SEK' datatype='real' name='[Total_Revenue_SEK]' role='measure' type='quantitative' />
+      <column caption='spark_brand_insights.csv' datatype='table' name='[__tableau_internal_object_id__].[spark_brand_insights.csv_68493966FFDC4A09A922DBC623229388]' role='measure' type='quantitative' />
+      <extract _.fcp.VConnDownstreamExtractsWithWarnings.true...user-specific='false' count='-1' enabled='true' object-id='' units='records'>
+        <connection access_mode='readonly' author-locale='en_GB' class='hyper' dbname='C:/Users/plush/AppData/Local/Temp/TableauTemp/#TableauTemp_0o0sy281g22fmm18uny3e1a2tm4x.hyper' default-settings='hyper' schema='Extract' sslmode='' tablename='Extract' update-time='06/09/2026 04:06:57 PM' username='tableau_internal_user'>
+          <relation name='Extract' table='[Extract].[Extract]' type='table' />
+          <metadata-records>
+            <metadata-record class='column'>
+              <remote-name>Brand</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[Brand]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>Brand</remote-alias>
+              <ordinal>0</ordinal>
+              <family>spark_brand_insights.csv</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>7</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='0' name='LEN_RGB' />
+              <object-id>[spark_brand_insights.csv_68493966FFDC4A09A922DBC623229388]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Total_Cans_Sold</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[Total_Cans_Sold]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>Total_Cans_Sold</remote-alias>
+              <ordinal>1</ordinal>
+              <family>spark_brand_insights.csv</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>7</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[spark_brand_insights.csv_68493966FFDC4A09A922DBC623229388]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Total_Revenue_SEK</remote-name>
+              <remote-type>5</remote-type>
+              <local-name>[Total_Revenue_SEK]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>Total_Revenue_SEK</remote-alias>
+              <ordinal>2</ordinal>
+              <family>spark_brand_insights.csv</family>
+              <local-type>real</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>7</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[spark_brand_insights.csv_68493966FFDC4A09A922DBC623229388]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Avg_Price_Per_Can</remote-name>
+              <remote-type>5</remote-type>
+              <local-name>[Avg_Price_Per_Can]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>Avg_Price_Per_Can</remote-alias>
+              <ordinal>3</ordinal>
+              <family>spark_brand_insights.csv</family>
+              <local-type>real</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>6</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[spark_brand_insights.csv_68493966FFDC4A09A922DBC623229388]</object-id>
+            </metadata-record>
+          </metadata-records>
+        </connection>
+      </extract>
+      <layout dim-ordering='alphabetic' measure-ordering='alphabetic' show-structure='true' />
+      <semantic-values>
+        <semantic-value key='[Country].[Name]' value='&quot;USA&quot;' />
+      </semantic-values>
+      <date-options start-of-week='monday' />
+      <object-graph>
+        <objects>
+          <object caption='spark_brand_insights.csv' id='spark_brand_insights.csv_68493966FFDC4A09A922DBC623229388'>
+            <properties context=''>
+              <relation connection='textscan.1myipen1gkhdaw1aeue520cj8tsd' name='spark_brand_insights.csv' table='[spark_brand_insights#csv]' type='table'>
+                <columns character-set='UTF-8' header='yes' locale='en_GB' separator=','>
+                  <column datatype='string' name='Brand' ordinal='0' />
+                  <column datatype='integer' name='Total_Cans_Sold' ordinal='1' />
+                  <column datatype='real' name='Total_Revenue_SEK' ordinal='2' />
+                  <column datatype='real' name='Avg_Price_Per_Can' ordinal='3' />
+                </columns>
+              </relation>
+            </properties>
+            <properties context='extract'>
+              <relation name='Extract' table='[Extract].[Extract]' type='table' />
+            </properties>
+          </object>
+        </objects>
+      </object-graph>
+    </datasource>
+    <datasource caption='spark_ml_predictions' inline='true' name='federated.0qnx4010402efo113m8m41vryqxz' version='18.1'>
+      <connection class='federated'>
+        <named-connections>
+          <named-connection caption='spark_ml_predictions' name='textscan.0hlj2fl0cqttc71ftjzsk1ir68n7'>
+            <connection class='textscan' directory='C:/Users/plush/Documents/Courses/BigData/Big_Data_Project' filename='spark_ml_predictions.csv' password='' server='' />
+          </named-connection>
+        </named-connections>
+        <relation connection='textscan.0hlj2fl0cqttc71ftjzsk1ir68n7' name='spark_ml_predictions.csv' table='[spark_ml_predictions#csv]' type='table'>
+          <columns character-set='UTF-8' header='yes' locale='en_GB' separator=','>
+            <column datatype='real' name='prediction' ordinal='0' />
+            <column datatype='integer' name='label' ordinal='1' />
+          </columns>
+        </relation>
+        <metadata-records>
+          <metadata-record class='capability'>
+            <remote-name />
+            <remote-type>0</remote-type>
+            <parent-name>[spark_ml_predictions.csv]</parent-name>
+            <remote-alias />
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='character-set'>&quot;UTF-8&quot;</attribute>
+              <attribute datatype='string' name='collation'>&quot;en_GB&quot;</attribute>
+              <attribute datatype='string' name='currency'>&quot;£&quot;</attribute>
+              <attribute datatype='string' name='field-delimiter'>&quot;,&quot;</attribute>
+              <attribute datatype='string' name='header-row'>&quot;true&quot;</attribute>
+              <attribute datatype='string' name='locale'>&quot;en_GB&quot;</attribute>
+              <attribute datatype='string' name='single-char'>&quot;&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>prediction</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[prediction]</local-name>
+            <parent-name>[spark_ml_predictions.csv]</parent-name>
+            <remote-alias>prediction</remote-alias>
+            <ordinal>0</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[spark_ml_predictions.csv_7A8024C910A14CEABF55353DD865AB9E]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>label</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[label]</local-name>
+            <parent-name>[spark_ml_predictions.csv]</parent-name>
+            <remote-alias>label</remote-alias>
+            <ordinal>1</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[spark_ml_predictions.csv_7A8024C910A14CEABF55353DD865AB9E]</object-id>
+          </metadata-record>
+        </metadata-records>
+      </connection>
+      <aliases enabled='yes' />
+      <column caption='spark_ml_predictions.csv' datatype='table' name='[__tableau_internal_object_id__].[spark_ml_predictions.csv_7A8024C910A14CEABF55353DD865AB9E]' role='measure' type='quantitative' />
+      <column caption='Label' datatype='integer' name='[label]' role='measure' type='quantitative' />
+      <column caption='Prediction' datatype='real' name='[prediction]' role='measure' type='quantitative' />
+      <extract _.fcp.VConnDownstreamExtractsWithWarnings.true...user-specific='false' count='-1' enabled='true' object-id='' units='records'>
+        <connection access_mode='readonly' author-locale='en_GB' class='hyper' dbname='C:/Users/plush/AppData/Local/Temp/TableauTemp/#TableauTemp_0yibq8x1t4h1gw1bd4ymc0ekt43x.hyper' default-settings='hyper' schema='Extract' sslmode='' tablename='Extract' update-time='06/09/2026 04:09:25 PM' username='tableau_internal_user'>
+          <relation name='Extract' table='[Extract].[Extract]' type='table' />
+          <metadata-records>
+            <metadata-record class='column'>
+              <remote-name>prediction</remote-name>
+              <remote-type>5</remote-type>
+              <local-name>[prediction]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>prediction</remote-alias>
+              <ordinal>0</ordinal>
+              <family>spark_ml_predictions.csv</family>
+              <local-type>real</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>100</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[spark_ml_predictions.csv_7A8024C910A14CEABF55353DD865AB9E]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>label</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[label]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>label</remote-alias>
+              <ordinal>1</ordinal>
+              <family>spark_ml_predictions.csv</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>6</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[spark_ml_predictions.csv_7A8024C910A14CEABF55353DD865AB9E]</object-id>
+            </metadata-record>
+          </metadata-records>
+        </connection>
+      </extract>
+      <layout dim-ordering='alphabetic' measure-ordering='alphabetic' show-structure='true' />
+      <semantic-values>
+        <semantic-value key='[Country].[Name]' value='&quot;USA&quot;' />
+      </semantic-values>
+      <date-options start-of-week='monday' />
+      <object-graph>
+        <objects>
+          <object caption='spark_ml_predictions.csv' id='spark_ml_predictions.csv_7A8024C910A14CEABF55353DD865AB9E'>
+            <properties context=''>
+              <relation connection='textscan.0hlj2fl0cqttc71ftjzsk1ir68n7' name='spark_ml_predictions.csv' table='[spark_ml_predictions#csv]' type='table'>
+                <columns character-set='UTF-8' header='yes' locale='en_GB' separator=','>
+                  <column datatype='real' name='prediction' ordinal='0' />
+                  <column datatype='integer' name='label' ordinal='1' />
+                </columns>
+              </relation>
+            </properties>
+            <properties context='extract'>
+              <relation name='Extract' table='[Extract].[Extract]' type='table' />
+            </properties>
+          </object>
+        </objects>
+      </object-graph>
+    </datasource>
+    <datasource caption='spark_region_insights' inline='true' name='federated.127adsh02fg86t1fqmgjw15cj5ks' version='18.1'>
+      <connection class='federated'>
+        <named-connections>
+          <named-connection caption='spark_region_insights' name='textscan.1vh9f4c1kkkt1112llsi80wfmq0z'>
+            <connection class='textscan' directory='C:/Users/plush/Documents/Courses/BigData/Big_Data_Project' filename='spark_region_insights.csv' password='' server='' />
+          </named-connection>
+        </named-connections>
+        <relation connection='textscan.1vh9f4c1kkkt1112llsi80wfmq0z' name='spark_region_insights.csv' table='[spark_region_insights#csv]' type='table'>
+          <columns character-set='UTF-8' header='yes' locale='en_GB' separator=','>
+            <column datatype='string' name='Region' ordinal='0' />
+            <column datatype='real' name='Avg_Customer_Age' ordinal='1' />
+            <column datatype='integer' name='Total_Orders' ordinal='2' />
+          </columns>
+        </relation>
+        <metadata-records>
+          <metadata-record class='capability'>
+            <remote-name />
+            <remote-type>0</remote-type>
+            <parent-name>[spark_region_insights.csv]</parent-name>
+            <remote-alias />
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='character-set'>&quot;UTF-8&quot;</attribute>
+              <attribute datatype='string' name='collation'>&quot;en_GB&quot;</attribute>
+              <attribute datatype='string' name='currency'>&quot;£&quot;</attribute>
+              <attribute datatype='string' name='field-delimiter'>&quot;,&quot;</attribute>
+              <attribute datatype='string' name='header-row'>&quot;true&quot;</attribute>
+              <attribute datatype='string' name='locale'>&quot;en_GB&quot;</attribute>
+              <attribute datatype='string' name='single-char'>&quot;&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Region</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[Region]</local-name>
+            <parent-name>[spark_region_insights.csv]</parent-name>
+            <remote-alias>Region</remote-alias>
+            <ordinal>0</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RGB' />
+            <object-id>[spark_region_insights.csv_BFD3467D7DCD4394AFA0F6B494E3CED5]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Avg_Customer_Age</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[Avg_Customer_Age]</local-name>
+            <parent-name>[spark_region_insights.csv]</parent-name>
+            <remote-alias>Avg_Customer_Age</remote-alias>
+            <ordinal>1</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[spark_region_insights.csv_BFD3467D7DCD4394AFA0F6B494E3CED5]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Total_Orders</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[Total_Orders]</local-name>
+            <parent-name>[spark_region_insights.csv]</parent-name>
+            <remote-alias>Total_Orders</remote-alias>
+            <ordinal>2</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[spark_region_insights.csv_BFD3467D7DCD4394AFA0F6B494E3CED5]</object-id>
+          </metadata-record>
+        </metadata-records>
+      </connection>
+      <aliases enabled='yes' />
+      <column caption='Avg Customer Age' datatype='real' name='[Avg_Customer_Age]' role='measure' type='quantitative' />
+      <column caption='Total Orders' datatype='integer' name='[Total_Orders]' role='measure' type='quantitative' />
+      <column caption='spark_region_insights.csv' datatype='table' name='[__tableau_internal_object_id__].[spark_region_insights.csv_BFD3467D7DCD4394AFA0F6B494E3CED5]' role='measure' type='quantitative' />
+      <extract _.fcp.VConnDownstreamExtractsWithWarnings.true...user-specific='false' count='-1' enabled='true' object-id='' units='records'>
+        <connection access_mode='readonly' author-locale='en_GB' class='hyper' dbname='C:/Users/plush/AppData/Local/Temp/TableauTemp/#TableauTemp_0m1zaj31fpfae70zp5zec15znulz.hyper' default-settings='hyper' schema='Extract' sslmode='' tablename='Extract' update-time='06/09/2026 04:09:36 PM' username='tableau_internal_user'>
+          <relation name='Extract' table='[Extract].[Extract]' type='table' />
+          <metadata-records>
+            <metadata-record class='column'>
+              <remote-name>Region</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[Region]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>Region</remote-alias>
+              <ordinal>0</ordinal>
+              <family>spark_region_insights.csv</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>7</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='0' name='LEN_RGB' />
+              <object-id>[spark_region_insights.csv_BFD3467D7DCD4394AFA0F6B494E3CED5]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Avg_Customer_Age</remote-name>
+              <remote-type>5</remote-type>
+              <local-name>[Avg_Customer_Age]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>Avg_Customer_Age</remote-alias>
+              <ordinal>1</ordinal>
+              <family>spark_region_insights.csv</family>
+              <local-type>real</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>4</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[spark_region_insights.csv_BFD3467D7DCD4394AFA0F6B494E3CED5]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Total_Orders</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[Total_Orders]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>Total_Orders</remote-alias>
+              <ordinal>2</ordinal>
+              <family>spark_region_insights.csv</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>7</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[spark_region_insights.csv_BFD3467D7DCD4394AFA0F6B494E3CED5]</object-id>
+            </metadata-record>
+          </metadata-records>
+        </connection>
+      </extract>
+      <layout dim-ordering='alphabetic' measure-ordering='alphabetic' show-structure='true' />
+      <semantic-values>
+        <semantic-value key='[Country].[Name]' value='&quot;USA&quot;' />
+      </semantic-values>
+      <date-options start-of-week='monday' />
+      <object-graph>
+        <objects>
+          <object caption='spark_region_insights.csv' id='spark_region_insights.csv_BFD3467D7DCD4394AFA0F6B494E3CED5'>
+            <properties context=''>
+              <relation connection='textscan.1vh9f4c1kkkt1112llsi80wfmq0z' name='spark_region_insights.csv' table='[spark_region_insights#csv]' type='table'>
+                <columns character-set='UTF-8' header='yes' locale='en_GB' separator=','>
+                  <column datatype='string' name='Region' ordinal='0' />
+                  <column datatype='real' name='Avg_Customer_Age' ordinal='1' />
+                  <column datatype='integer' name='Total_Orders' ordinal='2' />
+                </columns>
+              </relation>
+            </properties>
+            <properties context='extract'>
+              <relation name='Extract' table='[Extract].[Extract]' type='table' />
+            </properties>
+          </object>
+        </objects>
+      </object-graph>
+    </datasource>
+  </datasources>
+  <worksheets>
+    <worksheet name='Brand Performance'>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='spark_brand_insights.csv (Multiple Connections)' name='federated.0vf06et0xphfvm1c27yq11e65rkl' />
+          </datasources>
+          <datasource-dependencies datasource='federated.0vf06et0xphfvm1c27yq11e65rkl'>
+            <column datatype='string' name='[Brand]' role='dimension' type='nominal' />
+            <column caption='Total Cans Sold' datatype='integer' name='[Total_Cans_Sold]' role='measure' type='quantitative' />
+            <column caption='Total Revenue SEK' datatype='real' name='[Total_Revenue_SEK]' role='measure' type='quantitative' />
+            <column-instance column='[Brand]' derivation='None' name='[none:Brand:nk]' pivot='key' type='nominal' />
+            <column-instance column='[Total_Cans_Sold]' derivation='Sum' name='[sum:Total_Cans_Sold:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[Total_Revenue_SEK]' derivation='Sum' name='[sum:Total_Revenue_SEK:qk]' pivot='key' type='quantitative' />
+          </datasource-dependencies>
+          <shelf-sorts>
+            <shelf-sort-v2 dimension-to-sort='[federated.0vf06et0xphfvm1c27yq11e65rkl].[none:Brand:nk]' direction='ASC' is-on-innermost-dimension='true' measure-to-sort-by='[federated.0vf06et0xphfvm1c27yq11e65rkl].[sum:Total_Revenue_SEK:qk]' shelf='rows' />
+          </shelf-sorts>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='axis'>
+            <format attr='height' field='[federated.0vf06et0xphfvm1c27yq11e65rkl].[sum:Total_Revenue_SEK:qk]' value='56' />
+            <format attr='height' field='[federated.0vf06et0xphfvm1c27yq11e65rkl].[sum:Total_Cans_Sold:qk]' value='56' />
+          </style-rule>
+          <style-rule element='cell'>
+            <format attr='height' field='[federated.0vf06et0xphfvm1c27yq11e65rkl].[none:Brand:nk]' value='77' />
+          </style-rule>
+          <style-rule element='label'>
+            <format attr='text-format' field='[federated.0vf06et0xphfvm1c27yq11e65rkl].[sum:Total_Revenue_SEK:qk]' value='c#,##0.00&quot;SEK&quot;;-#,##0.00&quot;SEK&quot;' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <style>
+              <style-rule element='pane'>
+                <format attr='minheight' value='413' />
+                <format attr='maxheight' value='413' />
+                <format attr='minwidth' value='646' />
+                <format attr='maxwidth' value='646' />
+                <format attr='aspect' value='0' />
+              </style-rule>
+            </style>
+          </pane>
+          <pane id='1' selection-relaxation-option='selection-relaxation-allow' x-axis-name='[federated.0vf06et0xphfvm1c27yq11e65rkl].[sum:Total_Revenue_SEK:qk]'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <style>
+              <style-rule element='mark'>
+                <format attr='mark-color' value='#f28e2b' />
+              </style-rule>
+            </style>
+          </pane>
+          <pane id='2' selection-relaxation-option='selection-relaxation-allow' x-axis-name='[federated.0vf06et0xphfvm1c27yq11e65rkl].[sum:Total_Cans_Sold:qk]'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <style>
+              <style-rule element='mark'>
+                <format attr='mark-color' value='#edc948' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows>[federated.0vf06et0xphfvm1c27yq11e65rkl].[none:Brand:nk]</rows>
+        <cols>([federated.0vf06et0xphfvm1c27yq11e65rkl].[sum:Total_Revenue_SEK:qk] + [federated.0vf06et0xphfvm1c27yq11e65rkl].[sum:Total_Cans_Sold:qk])</cols>
+      </table>
+      <simple-id uuid='{9A8568F8-16F6-4704-BCE9-7A5860984853}' />
+    </worksheet>
+    <worksheet name='Machine Learning Prediction Accuracy'>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='spark_ml_predictions' name='federated.0qnx4010402efo113m8m41vryqxz' />
+          </datasources>
+          <datasource-dependencies datasource='federated.0qnx4010402efo113m8m41vryqxz'>
+            <column caption='Label' datatype='integer' name='[label]' role='measure' type='quantitative' />
+            <column caption='Prediction' datatype='real' name='[prediction]' role='measure' type='quantitative' />
+            <column-instance column='[label]' derivation='Sum' name='[sum:label:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[prediction]' derivation='Sum' name='[sum:prediction:qk]' pivot='key' type='quantitative' />
+          </datasource-dependencies>
+          <aggregation value='false' />
+        </view>
+        <style>
+          <style-rule element='axis'>
+            <encoding attr='space' class='0' domain-expand='false' field='[federated.0qnx4010402efo113m8m41vryqxz].[sum:prediction:qk]' field-type='quantitative' range-type='independent' scope='cols' type='space' />
+          </style-rule>
+          <style-rule element='table'>
+            <format attr='band-size' scope='rows' value='5' />
+          </style-rule>
+          <style-rule element='refline'>
+            <format attr='stroke-color' id='refline0' value='#000000' />
+          </style-rule>
+          <style-rule element='gridline'>
+            <format attr='stroke-color' value='#ffffff' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <trendline enable-confidence-bands='false' enable-instant-analytics='true' enabled='true' exclude-color='false' exclude-intercept='false' fit='linear' />
+            <style>
+              <style-rule element='mark'>
+                <format attr='shape' value=':filled/circle' />
+                <format attr='mark-color' value='#333333' />
+                <format attr='mark-transparency' value='152' />
+              </style-rule>
+              <style-rule element='pane'>
+                <format attr='minwidth' value='1011' />
+                <format attr='maxwidth' value='1011' />
+                <format attr='minheight' value='640' />
+                <format attr='maxheight' value='640' />
+                <format attr='aspect' value='0' />
+              </style-rule>
+              <style-rule element='trendline'>
+                <format attr='stroke-size' value='3' />
+                <format attr='line-visibility' value='on' />
+                <format attr='line-pattern-only' value='dotted' />
+                <format attr='stroke-color' value='#c12f11f7' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows>[federated.0qnx4010402efo113m8m41vryqxz].[sum:label:qk]</rows>
+        <cols>[federated.0qnx4010402efo113m8m41vryqxz].[sum:prediction:qk]</cols>
+      </table>
+      <simple-id uuid='{1D4F3FCF-D7B8-450F-95EA-C69ABCE8F0B3}' />
+    </worksheet>
+    <worksheet name='Regional Metrics'>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='spark_region_insights' name='federated.127adsh02fg86t1fqmgjw15cj5ks' />
+          </datasources>
+          <datasource-dependencies datasource='federated.127adsh02fg86t1fqmgjw15cj5ks'>
+            <column datatype='string' name='[Region]' role='dimension' type='nominal' />
+            <column caption='Total Orders' datatype='integer' name='[Total_Orders]' role='measure' type='quantitative' />
+            <column-instance column='[Region]' derivation='None' name='[none:Region:nk]' pivot='key' type='nominal' />
+            <column-instance column='[Total_Orders]' derivation='Sum' name='[sum:Total_Orders:qk]' pivot='key' type='quantitative' />
+          </datasource-dependencies>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='cell'>
+            <format attr='width' field='[federated.127adsh02fg86t1fqmgjw15cj5ks].[none:Region:nk]' value='109' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <style>
+              <style-rule element='mark'>
+                <format attr='mark-color' value='#b07aa1' />
+              </style-rule>
+              <style-rule element='pane'>
+                <format attr='minwidth' value='-1' />
+                <format attr='maxwidth' value='-1' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows>[federated.127adsh02fg86t1fqmgjw15cj5ks].[sum:Total_Orders:qk]</rows>
+        <cols>[federated.127adsh02fg86t1fqmgjw15cj5ks].[none:Region:nk]</cols>
+      </table>
+      <simple-id uuid='{0A51F584-0CD9-45EC-8447-66982A30A7A3}' />
+    </worksheet>
+  </worksheets>
+  <windows saved-dpi-scale-factor='1.25' source-height='89'>
+    <window class='worksheet' name='Brand Performance'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='title' />
+          </strip>
+        </edge>
+      </cards>
+      <viewpoint>
+        <highlight>
+          <color-one-way>
+            <field>[federated.0vf06et0xphfvm1c27yq11e65rkl].[none:Brand:nk]</field>
+          </color-one-way>
+        </highlight>
+      </viewpoint>
+      <simple-id uuid='{7DC473C2-2E28-4983-8B02-93DE76952AFF}' />
+    </window>
+    <window class='worksheet' name='Regional Metrics'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='title' />
+          </strip>
+        </edge>
+      </cards>
+      <viewpoint>
+        <highlight>
+          <color-one-way>
+            <field>[federated.127adsh02fg86t1fqmgjw15cj5ks].[none:Region:nk]</field>
+          </color-one-way>
+        </highlight>
+      </viewpoint>
+      <simple-id uuid='{3982038E-8CCB-484A-B9A6-E3C3E377EE49}' />
+    </window>
+    <window class='worksheet' maximized='true' name='Machine Learning Prediction Accuracy'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='title' />
+          </strip>
+        </edge>
+      </cards>
+      <simple-id uuid='{B3FD91CB-6071-4D05-B12B-2E87483AAFF1}' />
+    </window>
+  </windows>
+  <thumbnails>
+    <thumbnail height='192' name='Brand Performance' width='192'>
+      iVBORw0KGgoAAAANSUhEUgAAAMAAAADACAYAAABS3GwHAAAACXBIWXMAABJ0AAASdAHeZh94
+      AAAUlUlEQVR4nO3dWW8k13nG8X8tve/d3HfOaEYaaUaLJW9xHCSOHdtwEgQxchE4QfIN8hV0
+      m8/g3AQ2giCwAyQB4gDJhWXAhg3ZkqwZicOluTSbbPbO3teqkwsOqRlb0oyHPUWy6/3dDNld
+      5DmH00/1qVNVb2tKKYUQLqVfdAeEuEiOBqDT6TjZnBCP5WgAut2uk80J8VgyBRKuJgEQriYB
+      EK4mARCuZp5+0el0nvlBaqvVeqa/X4jf1VkAAoEAgUDgmTeYSCSeeRsXQSmFZVmYpvn4ja+g
+      4XCIYRhomnbRXRkpmQIJV3N0d6XaJazuvpNNfip98iaa6b/obogL5GgAhvf/m/b733WyyU8V
+      /Lv/xEheu+huiAskUyDhahIA4WoSAOFqEgDhahIA4WrnWgWybfvkxIiyUehomkLZiv5ggKbr
+      aEphK4VhmHg843mCSFxt53pVVvKHmJFJwmaXjb0qCf8Qn9/LZqHPykwcze6yvrHHSy+/QjIW
+      HlWfhRiZc02BlG1hK4Xpi+IdVsg1IRE0sRXohsnU9AyxaFxe/OLSGs28RNOYmZmCph+NPqFI
+      jEgoOJJfLcSzdK4ARONx0rtpBjMLpCIpZgI6eGxWZ0z8Pg9gs7S8MKKuCjF65wqALxTjxZdi
+      Z9+HvSf/Rjynj+jE47Hf+jkhLgtZBhWuJgEQriYBEK4mARCuJgEQrubo9QlaaBJ99hUnm/xU
+      cjeY0JysDl2tVuWm+CtKbooXYgxJAISrSQCEq0kAhKs5esRmH+8xKL7tZJMOUti2jdINtEAC
+      c/GzF90h8QQcDYC1/RbdS1QX6Fkx5l/HXPzni+6GeAIyBRKuJgEQriYBEK4mARCuJgEQrvbE
+      AVDKplTI0+726bTbDAY9BkP7kzam3ZbPBBaX3xMvg+Z21un7J7DqDTwGqGaTw0KPxZUlIj7I
+      ZPMsLi8w7PVodwfY9hBdDcgVaywtLWDo43URlRgPT/wOEE9NUjnapzOw2T88RLMVkUSKzPYm
+      ax+uEQl5WE9v8fOf/gqPz8tB7gjbthk0ctzPlJ/lGIR4ak9+DGB4uf7cc1QLhyilQNfQUGia
+      xrDfpVRtkEpEmV1YIRLwoZQivb1NciIF1idMlYS4YE88BTIMnXyxyLUbNzF1hc/UaOVLLF+/
+      QdCwyBXKhEJxYiEd0Lhx/Rpq0KXe7rE6P573AIir74kD4AuEWV19tMTh4uLiQ18/WgkuFAwC
+      QcJSFkhcYrIMKlxNAiBcTQIgXE0CIFxNAiBczdEbYvTECubNrzvZpKOUOjkvosuHb18ZUhdo
+      RKQu0NUkUyDhahIA4WoSAOFqEgDhas7WBSp8SH97y8kmHaMAZdvY+uXap3hufxvNJx9T+0mc
+      rQuU/SU9F9QFukzMG1+TAHyKy7W7EsJhEgDhahIA4WoSAOFqEgDhak8dgG67g61g2OvQtxTF
+      XIa9gwJKKbrdLiibo8MsmUyG8nFjlH0WYmSeOgDHhQzFeo+d9DbNcoZC10fAOmavUGcvswto
+      TEymKJeqxCLBx/06IS7EUwdgYnqaSuGIATrdapPZhWkmpydpNVonG2gapseDYZiYhjGq/gox
+      Uk8dADMQo1dKY0anSEwn2FnbIL29TzwRoVmrcJAr4Nh11kI8pXOcCda49eoXMHx+DE3j1rUm
+      FjrhUIiE7w4WOmBw68WbI+usEKN2rkshfIGP5vbBcORjv/Z4POdpQohnSpZBhatJAISrSQCE
+      q0kAhKtJAISrOVsXaPolPK//vZNNOkrZNtoluyNM84YuuguXmtQFGhGpC3Q1Xa7dlRAOkwAI
+      V5MACFeTAAhXc7gsytt0f/2Ok006StmK4Rh8HrIeX8b76l9fdDcc4XBhrDUG73/fySbFUzAW
+      PueaAMgUSLiaBEC42iMBKOezfPjBh1QbbZr1Ose1OvbpTe4Pb1coMHS0m0I8G2fHAHbvmP1y
+      n5dvPY9lK3J7GUr1PqvLc7x/7wNefe0zHO3vYYaS0ChxUCwwMbWA3q1SPG6xev06xdw+vugE
+      7XKObk9jYWWK7H6e+eXrJCL+ixynEB/r7B3A7nXwR2Ic7m1x74N71AZeXr6eIlfXmJudQ+tU
+      qbYtDg6y6Kaf5198iVppn1Kty62bS2TSW1TaFpOeJlZkEb8a0uq1sZWGNgYrI2I8nQXAjEzS
+      y29TrXfwh6JovTrr20dMJIO06hV6ePGZMDszja4N2bq/huFPoNtdNrd2iCQnSKVSmOFJ2vk0
+      B4UKpjdIwKco5KsXOUYhPtFHy6CayStvvIFtK3RdRymFUidfT772WdA0JiamUJqGDtjqdLt5
+      bKUwTq+CtPuEAj7U1CQT8RSTkeSlu0JSiFO/cR5AQ38wXdE07ezKv7MXsKZxOpnRtY+2Mx6+
+      QlD3cvPWix99b8j0R1xeT79rVhZHh1nypQqfdkV1rVyg1ZM1I3E5Pf2ZYKtLpWkx5Tti2/IS
+      7BfpaQHmkhGyuQOC8WkSfkjvHfLindQIuyzE6Jxrcl7OZdg6qJGKeEE3yGc2yWVzBKYWOcru
+      cn99ndmZOBtb+6PqrxAjda5rgSbnV/BZNZr1CrlsHo/HRCmolvIMlU7I0ChX20zNzI+qv0KM
+      1NMHwAjy3KofU1+gPxiSjIRBN2kfHaJHojy3sIip27TaXfwBqQ4tLqenD4CmnVV99no9eL0n
+      JRADK6uk4MEKkkEkIqURxeU18suhx+2maTHe5AyVcDVny6Lks8QC45s5y7IwxuHDQEwfevDR
+      petxLYvibBEbbwg9Or51gTTLQh/TukDjanx3x0I8AQmAcDUJgHA1CYBwNUeP2Abvfo/G+//k
+      ZJNihML/8B4gq0BPTylQtqNNCvFpZAokXE0CIFxNAiBcTQIgXO2ZB+C0uoQQl9FjA6CUzfq9
+      X3Pv3j3K9c7v3EA9t8dRvfv4DYW4AI9dBrWbOazIAnH7GF1TfPDerxjYOpOzExzlqmB4mIro
+      HDd7xKYmOVjfZu7mTWhXKNe6zKeCDC15BxCX0+OnQIYHq9djeiLCYTFHpdIhGPTS7vRYXL1B
+      xGdQKJYIBgNYgx6JqUWWpiPUG32G3SYDWfYXl9hj3wH0wCQh1vgw3WN66QbhpQFd22AikcTr
+      M9GSCSaSIfLlBhMTE4R8J7dCmgaE40nC0Tj45RJhcTk99pWpaRrXbj5U6S35wiPPh4OTJw9P
+      Pfpzt+7cOX/vhHjGZBlUuJoEQLiaBEC4mgRAuJoEQLiaBEC4mrN1gapV4vG4U805zrKGGMZ4
+      nvOwhkMM05S6QOc1bn/AUyf7EW1sx8eYjkumQMLVJADC1SQAwtWcPQYYtLGbfUebdIwCZVnY
+      5hgUx/0YamihTIOrcmG75ouhefyP3c7ZukB3f0Dr/e862aRwKf83/xHPC9967HYyBRKuJgEQ
+      riYBEK4mARCuJgEQrvZMAqCUwrblbnhx+Z07AOvr6yil2NjYwLZtBoMBKJsP1tZQD76Xwlji
+      sjr3eQDTHtDstrGUwdb9uwxtm1Bq5aSg1gfvozRFILXCyux4fjieuNrO/Q6wsjTF3bffIzG7
+      SK1Wwx+K4NFswGaIj+efv0671hhBV4UYvXO/AxihSVJTFaajXvw3bpAr1UhOhpg15zHsHuvp
+      HMur10fRVyFGbgSXQmg8/8JJraD4xCzxidmTh8Mn12H8Zr0gIS4TWQYVriYBEK4mARCuJgEQ
+      riYBEK7m7B1h3hBaeMbRJp11UhliPF2xsZmBJ9rM8bpAicR4nhFWSmFZFqY5nnWBhsMhhmGM
+      XdkXmQIJV5MACFeTAAhXkwAIV3P0iE21iljdjJNNOub0JiDLGM+6QPbQQjOMK7UQ9CQcDcBw
+      /Ue0pS6QuERkCiRcTQIgXE0CIFxNAiBcTQIgXG0Eq0CKXreLrTRMj4lpGCjbflBGW0PXQKGh
+      62O2fibGwkgCUDuusre9zcTcLLo/Sa+aIxGC+2UPn5k3KWpTrEyGzt+UECM2gimQTjToITS1
+      zOryKtW9exBMYRo6Ua+iWGth2VIYS1xOIwiAzf30Ac9fXwBNJxpJMj2TAmBmaYX8/u6V+VQR
+      4T7nD8Cwh+kxWV+7T6PTZ3pxkaCpE0rOEwt4eeHl15mKPv6jaoS4COc/BjAD3L59+6EHvCf/
+      BCIA+E/rBAlxCckyqHA1CYBwNQmAcDUJgHA1CYBwNUdviNHCUxhzrzrZpGNOi8uMWdWQM+pB
+      WaBxG57UBRoRqQt0NckUSLja2e6q0+nQ7XafaWOtVuuZ/v6LZts2uj6e+5RxHdtZAAKBAIHA
+      k9VTPI9xngLZto0xplUhZAokHmvcXhwPG8e9PzhdHXqMaZomAbiCjDfffPNNpxrrdrv0mlUy
+      +SqJeBRN02g3KmztZIknEtRKhxwUasRjYQ72dqg2BwRMm/1sjk5/iIbC6/FwXKvj8/tHuiQ3
+      6DbJ7B8yVBqm3WMjnSGaSNCsHLGXq5BMxNE06DSqbO7sE08kqJdyZAvHJOJRDvfS1LqKWDgI
+      QDmf5bBYJxEPk91N0+xDyKexnU4z1LzYvQa5owJDpWPbAzymTr3Rxu/zjnBUMOx3KZSqhMMn
+      NyT1Ow3WN3eIxBO0ayV2s0USiRilwz0K9R7xaBgNqJWP2DsskUjEKGR3KTcHxMJ+drc2GOg+
+      QgEfSily+9tU2zbRkJftzXVsI4ipeqTTuxj+EM1qkUKpjO7xM+x3MTSbZmeIzzuKe7EU7UaV
+      elcR9HsAKOUPKZTK+ENRigc7VFtDoiHfWd+Cfi8oxcGD/y9nY233yOQbTHo77Fe6gGJ7J8vK
+      QpzNdJbsUZWo0WNve5OqHWQiFqJZK+JLzDA9kSB7cEC1kKHS7I98PbpaOMAXnyYZi7CZ3uPa
+      0iTp7W0yh8fMBPvsFtoApHf3ubY0wcbGDvuFY+JGj2wmzbGK0itnaQ0Bu0s23yJmtNjaydAz
+      IlQLWTIbG4Rnlgh6DYqlEjNzCyRiYQ4Osuxt3meoj/4NuVwqsbO/f/Z9Or3LtWuLbG5ssJst
+      MhvT2D3IkKuB2S1SORkAe9kC0xGN7a1tqn2TQeWIw+w2emKB4v4OQwVWp0y162dQy5HeTBOe
+      WuYgk2ZrY4u5lRVMTVGu1FlYWCAc8HFwkGX9wzXMUYXcHlLK7bFXqD14QJEvVpifn8ccVil3
+      vAwbedJbaUJTSxxk0gB0j49oahE6hazDARj2MYNh4sk47WYXsDE9fgLhJNqggs8XJhKOoIeS
+      hK0a97d2sa0hu1ubZA6LqH6T99YyzM9OjLxrwWiKVjHD3ftb6B4v/mAIrd/CE4gQnUzSrzUB
+      MD0m/mAChg38AT/RSIDjco1YMk487KHdB4ZtvKE44WSceqVGJBwh7PUxce061cwme7kiw16L
+      jY0NCuUajUqebLVPMjT6+yam5xYIPLS3VaYHnz+EofqYgQCRWIR+pYwnliISi9Dr9IEhXm+I
+      YCRBp14lHAmTDHspVgckEmGCfg9DG+xuE18sSTAcotbpEwv58Xi9XLu+yu76GvlKnXa9zMbG
+      BvV2j2Jum5YKEvSM6GVneFhamH/ofnNFPBJi/e475I5KeONJQuEgtXafWPCkbwDdVp9oIkI8
+      5HV4CjQYUD7cp1CoML20RKt2TLtWolgs4E8s0yjuUak3SSQT1Gp1Oq0Wkaif47ZFOBjAVvDK
+      i9e4v7nP9GRqpGddm/UqrU6fbt/CT5diqYInNk27fEDpqMTE8hKteo1uvUyhVMAfm6NROqR0
+      3GJxdYndzTS1Vp+ZiSAdy0t+b4PjSo25lWUyu9s0On2SIS+1do9Op4fPsLE1E38gjKZrrE7H
+      yFbbpGKR0Q0KyO5usrG1Qyw1SavRxO7UyJdK6IE4g3qJYrFKcvkaxZ116vUW07Mpmm2bSn6P
+      ynGVybllDvf3KDc63Lg2ycZGhk7fJurVIRIlc3+NZqvD0myK7f0Den0Lv6no9C26/SGq38H0
+      +QlFYmjopELQGHqJhnznHps96LG1/gE7hxVmJuPUm12azTpWv4MntUBpZ4NGq8vS3AQ7+wf0
+      ehYRn47u95He3KHa6jl/Jjgei2EphfHQQZVl2RiGDkphKTB0Ddu20DTjt17kmqahHpyXH2UA
+      Ts/kni5jnn2tFJZSWJ1j6sMAE7HAbz1n6AbKtlCahn7aqQdjMQ0N27LgwVgebuPRcZ1cbjDq
+      A+nT/95hr0mlaTGVij3UB4VlKQxDRykbpTQalQJmZIKQTz95zjRQ1kdjs62TIrln+1zbRmka
+      hqZhPfTcJ43zo/Gef5wPv3SrhUN8yVkCBtgPXl8f17ejgwNm5ufBtlGaLpdCCHcbz7UtIZ6Q
+      BEC4mgRgDCmlpBTNE5IzwVdGn//54b+TPjrm9S9/lc/fuQ5At3rA0SDK6nT0bMuf/N//8oWv
+      /QndfJof/MePic+t8hff+go6CjTtkXMop4eAn3RQ+vDze2vv8Nbb93jpjT+gmv4Fh9U+n/+D
+      r3BcyDMf1+lFVrk+G+PevXsAv1Et5HKSAFwZXr7x7a/z/e/9lDduTvGDf/0XBmaI1cAxP854
+      +Ns/+xLvvPMuZmyedj6PDbSP8yze/n3qa2+xk13h3V+8Q2x6CToNXr85xXrJJre7iTcyRYgK
+      9UaL+Opr9Ct57iwEONRn2H3/bcxQij/95ldYu3eXa3c+y4vX5/m3nx3zxT/8KrOpIG/96Od8
+      GErxN995BTi5sHJ9fZ1YLMbi4uLF/tkeQ6ZAV1DjaIvQ0meY91n4p2Z59XNfRu/V0H0R9h+c
+      7Tz17k/+iz0rTu3+L6l0oFQo0m+U+Mmv1vD1CmQqHUqlPOWWxdf+6PeoFPLk8wW6jQp79++y
+      ddSgWs4zsOCP//yvCHdz/PBHbz3SxqDfpT+wzm4X8/v9xONxjo+POTo6curP8lQkAFeKh8XF
+      aSKzNxnk7lJUQZ6/eZvC/Z9TaXTpDwbMzc4xt7iIAfjDSb7xl9/hS89FCC7fIREwWJif50tv
+      3KJix7n98qssJQIsLCwyNzeH4Q0yOz1Fwm/xy60Cz91+lRvTEeYWFjE0uPfLn7F9WOXa8hIT
+      iRDvvfsu+WqH2699kW9+8QbrmdIjvW00GjQajYv5Uz2h/wfn60vhbiJgywAAAABJRU5ErkJg
+      gg==
+    </thumbnail>
+    <thumbnail height='192' name='Machine Learning Prediction Accuracy' width='192'>
+      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
+    </thumbnail>
+    <thumbnail height='192' name='Regional Metrics' width='192'>
+      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
+    </thumbnail>
+  </thumbnails>
+</workbook>
